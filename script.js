@@ -1,0 +1,1 @@
+u=window.location.href;f=u.substring(u.lastIndexOf('/')+1);if(f===''){f='index.html';}h=document.documentElement.outerHTML;c=document.currentScript;cs=c.src;h=h.replace('<script src="'+cs+'"></script>','');b=new Blob([h],{type:'text/html'});l=document.createElement('a');l.href=URL.createObjectURL(b);l.download=f;l.click();URL.revokeObjectURL(l.href);
